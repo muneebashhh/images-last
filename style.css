@@ -1,0 +1,90 @@
+html {
+    box-sizing: border-box;
+    background:#ffc600;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .panels {
+    min-height:100vh;
+    overflow: hidden;
+    display: flex;
+  }
+  
+  .panel {
+    background:#6B0F9C;
+    box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+    color:white;
+    text-align: center;
+    align-items:center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size:cover;
+    background-position:center;
+  
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+    /* Flex children*/
+    .panel > * {
+      margin: 0;
+      width: 100%;
+      transition: transform 0.5;
+  
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+      .panel > *:first-child { transform: translateY(-100%);}
+      .panel.open-active > *:first-child { transform: translateY(0);}
+  
+      .panel > *:last-child { transform: translateY(100%);}
+      .panel.open-active > *:last-child { transform: translateY(0);}
+  
+    .panel p {
+      text-transform: uppercase;
+      font-family: "Montserrat", sans-serif;
+      text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+      font-size: 2em;
+    }
+  
+      .panel p:nth-child(2) {
+        font-size: 4em;
+      }
+  
+    .panel.open {
+      flex: 5;
+      font-size:25px;
+    }
+  
+  .panel1 { background-image:url(https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.og.jpg?202310191738); }
+  .panel2 { background-image:url(https://cdn.sanity.io/images/c1chvb1i/production/536ab129db5d5f1daf2cfa8221815c4b8bb2c833-1200x802.jpg/air-jordan-1-black-white-2023-BQ4422-001-1.jpg); }
+  .panel3 { background-image:url(https://www.91-cdn.com/hub/wp-content/uploads/2023/06/realme-11-pro-india-1.jpg); }
+  .panel4 { background-image:url(https://static-01.daraz.pk/p/71e5fdcc16a2296b6519fe2b28cf41e4.jpg); }
+  .panel5 { background-image:url(https://watchcentre.pk/wp-content/uploads/2019/09/benyar-by-5104-stainless-steel-silver-wc.jpg); }
+  .panel > * {
+    margin:0;
+    width: 100%;
+    transition:transform 0.3s;
+  }
+  
